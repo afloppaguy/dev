@@ -28,6 +28,18 @@
     color:var(--ink);
     font-family:'Inter',sans-serif;
     overflow-x:hidden;
+    cursor: none; /* Custom cursor */
+  }
+
+  /* Film Grain Texture */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 9998;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   }
 
   ::selection{background:var(--ink);color:var(--paper);}
@@ -39,6 +51,38 @@
     font-weight:900;
     letter-spacing:-0.02em;
     line-height:0.95;
+  }
+
+  /* ---------- Custom Cursor ---------- */
+  .cursor-dot, .cursor-outline {
+    position: fixed;
+    top: 0; left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+  }
+  .cursor-dot {
+    width: 6px; height: 6px;
+    background: #fff;
+    transition: width 0.2s ease, height 0.2s ease;
+  }
+  .cursor-outline {
+    width: 32px; height: 32px;
+    border: 1px solid rgba(255,255,255,0.5);
+    transition: width 0.3s cubic-bezier(.16,1,.3,1), height 0.3s cubic-bezier(.16,1,.3,1), border-color 0.3s ease;
+  }
+  .cursor-hover .cursor-dot {
+    width: 0; height: 0;
+  }
+  .cursor-hover .cursor-outline {
+    width: 50px; height: 50px;
+    border-color: #fff;
+  }
+  @media (hover: none) {
+    body { cursor: auto; }
+    .cursor-dot, .cursor-outline { display: none; }
   }
 
   /* ---------- split text animation spans ---------- */
@@ -154,19 +198,9 @@
     background:
       repeating-linear-gradient(135deg, transparent 0 18px, var(--stone-light) 18px 19px);
   }
-  .exp-visual .slot-label{
-    position:absolute;inset:0;
-    display:flex;flex-direction:column;
-    justify-content:space-between;
-    padding:20px;
-    pointer-events:none;
-  }
-  .exp-visual .slot-top{
-    display:flex;justify-content:space-between;
-    font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--stone);
-  }
   .exp-visual img,
-  .exp-visual svg{
+  .exp-visual svg,
+  .exp-visual video{
     width:100%;height:100%;object-fit:cover;
     position:absolute;inset:0;
     display:block;
@@ -252,6 +286,40 @@
       grid-template-columns:1fr;order:initial;
     }
     .exp-row{grid-template-columns:1fr;gap:40px;}
+  }
+
+  /* ---------- Marquee ---------- */
+  .marquee {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 24px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .marquee-track {
+    display: inline-flex;
+    animation: scroll-marquee 30s linear infinite;
+  }
+  .marquee span {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    text-transform: uppercase;
+    padding: 0 40px;
+    letter-spacing: -0.02em;
+  }
+  .marquee span::after {
+    content: '✦';
+    margin-left: 40px;
+    color: var(--accent);
+    font-size: 24px;
+    vertical-align: middle;
+  }
+  @keyframes scroll-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
   }
 
   /* ---------- about / approach ---------- */
@@ -343,11 +411,14 @@
   }
 
   @media(prefers-reduced-motion: reduce){
-    .split-line span, .fade-up{transition:none !important;animation:none !important;opacity:1 !important;transform:none !important;}
+    .split-line span, .fade-up, .marquee-track{transition:none !important;animation:none !important;opacity:1 !important;transform:none !important;}
   }
 </style>
 </head>
 <body>
+
+<div class="cursor-outline"></div>
+<div class="cursor-dot"></div>
 
 <nav>
   <div class="logo">AFLOPPAGUY</div>
@@ -382,7 +453,7 @@
   <div class="exp-row fade-up">
     <div class="exp-visual exp-visual--carousel" data-carousel>
       <div class="carousel-track">
-        <video class="carousel-slide is-active" src="assets/project1-scripting-1.mp4" muted loop playsinline preload="metadata"></video>
+        <video class="carousel-slide is-active" src="assets/project1-scripting-1.mp4" muted loop playsinline preload="metadata" autoplay></video>
         <video class="carousel-slide" src="assets/project1-scripting-2.mp4" muted loop playsinline preload="metadata"></video>
         <video class="carousel-slide" src="assets/project1-scripting-3.mp4" muted loop playsinline preload="metadata"></video>
       </div>
@@ -416,7 +487,7 @@
   <div class="exp-row fade-up">
     <div class="exp-visual exp-visual--carousel" data-carousel>
       <div class="carousel-track">
-        <video class="carousel-slide is-active" src="assets/project2-vfx-1.mp4" muted loop playsinline preload="metadata"></video>
+        <video class="carousel-slide is-active" src="assets/project2-vfx-1.mp4" muted loop playsinline preload="metadata" autoplay></video>
         <video class="carousel-slide" src="assets/project2-vfx-2.mp4" muted loop playsinline preload="metadata"></video>
         <video class="carousel-slide" src="assets/project2-vfx-3.mp4" muted loop playsinline preload="metadata"></video>
         <video class="carousel-slide" src="assets/project2-vfx-4.mp4" muted loop playsinline preload="metadata"></video>
@@ -451,7 +522,7 @@
   <div class="exp-row fade-up">
     <div class="exp-visual exp-visual--carousel" data-carousel>
       <div class="carousel-track">
-        <video class="carousel-slide is-active" src="assets/ui-2.mp4" muted loop playsinline preload="metadata"></video>
+        <video class="carousel-slide is-active" src="assets/ui-2.mp4" muted loop playsinline preload="metadata" autoplay></video>
       </div>
       <button class="carousel-btn carousel-prev" aria-label="Previous clip" data-dir="-1">&lsaquo;</button>
       <button class="carousel-btn carousel-next" aria-label="Next clip" data-dir="1">&rsaquo;</button>
@@ -479,6 +550,19 @@
     </div>
   </div>
 </section>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Luau Scripting</span>
+    <span>VFX & Particles</span>
+    <span>UI Design</span>
+    <span>Available for Commissions</span>
+    <span>Luau Scripting</span>
+    <span>VFX & Particles</span>
+    <span>UI Design</span>
+    <span>Available for Commissions</span>
+  </div>
+</div>
 
 <section class="about" id="about">
   <div class="section-head fade-up">
@@ -534,13 +618,35 @@
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
+  // Custom Cursor Logic
+  const cursorDot = document.querySelector('.cursor-dot');
+  const cursorOutline = document.querySelector('.cursor-outline');
+  window.addEventListener('mousemove', (e) => {
+    cursorDot.style.top = e.clientY + 'px';
+    cursorDot.style.left = e.clientX + 'px';
+    cursorOutline.style.top = e.clientY + 'px';
+    cursorOutline.style.left = e.clientX + 'px';
+  });
+  document.querySelectorAll('a, button, .contact-link-item, [data-carousel]').forEach(el => {
+    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+  });
+
   // Carousel (supports both image and video slides)
   document.querySelectorAll('[data-carousel]').forEach(carousel => {
     const slides = carousel.querySelectorAll('.carousel-slide');
     const dots = carousel.querySelectorAll('.dot');
     const counter = carousel.querySelector('[data-current]');
+    const btns = carousel.querySelectorAll('.carousel-btn');
     let current = 0;
     let inView = false;
+
+    // Hide UI if only one slide exists to keep it clean
+    if (slides.length <= 1) {
+      btns.forEach(b => b.style.display = 'none');
+      if(counter) counter.style.display = 'none';
+      dots.forEach(d => d.parentElement.style.display = 'none');
+    }
 
     function playSlide(slide){
       if (slide && slide.tagName === 'VIDEO' && inView) {
@@ -563,7 +669,7 @@
       if(counter) counter.textContent = current + 1;
     }
 
-    carousel.querySelectorAll('.carousel-btn').forEach(btn => {
+    btns.forEach(btn => {
       btn.addEventListener('click', () => goTo(current + parseInt(btn.dataset.dir, 10)));
     });
     dots.forEach(dot => {
