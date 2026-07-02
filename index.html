@@ -379,18 +379,6 @@
     <h2>Projects</h2>
   </div>
 
-  <!-- ============================================================
-       EDIT ME: Each .exp-row below is a placeholder project.
-       For each one:
-         1. Replace the <h3> with the game's name.
-         2. Rewrite the <p> with what you actually did.
-         3. Fill in the .meta values (role, creator, visits, status).
-         4. Swap the placeholder SVG art for a real screenshot:
-            <img src="assets/yourshot.png" alt="...">
-            (or see the carousel example at the bottom of this file
-            for multiple screenshots).
-       ============================================================ -->
-
   <div class="exp-row fade-up">
     <div class="exp-visual exp-visual--carousel" data-carousel>
       <div class="carousel-track">
@@ -423,7 +411,7 @@
         <div><strong>Platform</strong>Roblox</div>
       </div>
     </div>
-  </div>
+  </div> 
 
   <div class="exp-row fade-up">
     <div class="exp-visual exp-visual--carousel" data-carousel>
@@ -461,34 +449,15 @@
   </div>
 
   <div class="exp-row fade-up">
-    <div class="exp-visual">
-      <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a game interface layout" preserveAspectRatio="xMidYMid slice">
-        <rect width="800" height="600" fill="#FAFAF8"/>
-        <rect x="110" y="100" width="380" height="400" fill="#FFFFFF" stroke="#0E0E0E" stroke-width="2"/>
-        <rect x="110" y="100" width="380" height="54" fill="#FAFAF8" stroke="#0E0E0E" stroke-width="2"/>
-        <rect x="134" y="120" width="140" height="14" fill="#0E0E0E"/>
-        <rect x="134" y="182" width="240" height="16" fill="#D8D6D0"/>
-        <rect x="430" y="178" width="24" height="24" fill="none" stroke="#0E0E0E" stroke-width="2"/>
-        <rect x="134" y="234" width="200" height="16" fill="#D8D6D0"/>
-        <rect x="430" y="230" width="24" height="24" fill="none" stroke="#0E0E0E" stroke-width="2"/>
-        <rect x="134" y="286" width="260" height="16" fill="#D8D6D0"/>
-        <rect x="430" y="282" width="24" height="24" fill="#3D5A40"/>
-        <rect x="134" y="338" width="180" height="16" fill="#D8D6D0"/>
-        <rect x="430" y="334" width="24" height="24" fill="none" stroke="#0E0E0E" stroke-width="2"/>
-        <rect x="134" y="420" width="160" height="44" fill="#3D5A40"/>
-        <rect x="158" y="436" width="112" height="12" fill="#FAFAF8"/>
-        <rect x="530" y="100" width="160" height="250" fill="#FFFFFF" stroke="#0E0E0E" stroke-width="2"/>
-        <circle cx="610" cy="164" r="28" fill="#D8D6D0"/>
-        <rect x="558" y="214" width="104" height="12" fill="#0E0E0E"/>
-        <rect x="558" y="242" width="72" height="12" fill="#D8D6D0"/>
-        <rect x="558" y="290" width="104" height="12" fill="#D8D6D0"/>
-        <rect x="530" y="384" width="160" height="18" fill="none" stroke="#0E0E0E" stroke-width="2"/>
-        <rect x="530" y="384" width="104" height="18" fill="#3D5A40"/>
-        <rect x="530" y="430" width="70" height="70" fill="#FAFAF8" stroke="#0E0E0E" stroke-width="2"/>
-        <circle cx="565" cy="465" r="5" fill="#3D5A40"/>
-      </svg>
-      <div class="slot-label">
-        <div class="slot-top"><span>Project 03</span><span>UI</span></div>
+    <div class="exp-visual exp-visual--carousel" data-carousel>
+      <div class="carousel-track">
+        <video class="carousel-slide is-active" src="assets/ui-2.mp4" muted loop playsinline preload="metadata"></video>
+      </div>
+      <button class="carousel-btn carousel-prev" aria-label="Previous clip" data-dir="-1">&lsaquo;</button>
+      <button class="carousel-btn carousel-next" aria-label="Next clip" data-dir="1">&rsaquo;</button>
+      <div class="carousel-counter"><span data-current>1</span> / 1</div>
+      <div class="carousel-dots">
+        <button class="dot is-active" data-index="0" aria-label="Go to clip 1"></button>
       </div>
     </div>
     <div class="exp-text">
@@ -613,28 +582,6 @@
     vis.observe(carousel);
   });
 </script>
-
-<!-- ============================================================
-     CAROUSEL EXAMPLE. To give a project multiple screenshots,
-     replace its <div class="exp-visual">...</div> with this block
-     (adjust the number of slides/dots and the counter total):
-
-<div class="exp-visual exp-visual--carousel" data-carousel>
-  <div class="carousel-track">
-    <img src="assets/shot1.png" alt="Project view 1" class="carousel-slide is-active">
-    <img src="assets/shot2.png" alt="Project view 2" class="carousel-slide">
-    <img src="assets/shot3.png" alt="Project view 3" class="carousel-slide">
-  </div>
-  <button class="carousel-btn carousel-prev" aria-label="Previous image" data-dir="-1">&lsaquo;</button>
-  <button class="carousel-btn carousel-next" aria-label="Next image" data-dir="1">&rsaquo;</button>
-  <div class="carousel-counter"><span data-current>1</span> / 3</div>
-  <div class="carousel-dots">
-    <button class="dot is-active" data-index="0" aria-label="Go to image 1"></button>
-    <button class="dot" data-index="1" aria-label="Go to image 2"></button>
-    <button class="dot" data-index="2" aria-label="Go to image 3"></button>
-  </div>
-</div>
-     ============================================================ -->
 
 </body>
 </html>
