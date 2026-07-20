@@ -1,0 +1,331 @@
+[
+  {
+    "id": "flag-memory",
+    "title": "Flag Memory",
+    "group": "Games",
+    "summary": "A multiplayer game where everyone draws a flag from memory, gets an accuracy score and compares the result with the lobby.",
+    "intro": "Flag Memory is the project I am closest to finishing. Players join or create a lobby, draw the shown flag from memory and get scored by comparing their drawing against the real flag.",
+    "cover": {
+      "type": "image",
+      "src": "assets/projects/flag-memory/cover.png",
+      "alt": "Flag Memory score screen comparing a player's Barbados drawing to the original flag"
+    },
+    "featured": true,
+    "status": "In development",
+    "year": 2026,
+    "made": "Built solo in Roblox Studio.",
+    "details": [
+      "I made the flag analysis for around 130 flags. It compares the player's drawing to the real flag and gives an accuracy score based on the pixels.",
+      "The canvas includes a paint brush, paint bucket, eraser, lines, rectangles, circles and stars.",
+      "The game has custom lobbies, live rankings, a final podium, player records and badges.",
+      "I made the scripting, UI, effects and game systems myself."
+    ],
+    "media": [
+      {
+        "type": "video",
+        "src": "assets/projects/flag-memory/gameplay.mp4",
+        "poster": "assets/projects/flag-memory/cover.png",
+        "title": "Full gameplay showcase"
+      },
+      {
+        "type": "image",
+        "src": "assets/projects/flag-memory/player-record.png",
+        "alt": "Flag Memory player record and badge cabinet screen",
+        "title": "Player records and badges"
+      },
+      {
+        "type": "video",
+        "src": "assets/projects/flag-memory/create-lobby.mp4",
+        "poster": "assets/projects/flag-memory/cover.png",
+        "title": "Creating a lobby"
+      },
+      {
+        "type": "video",
+        "src": "assets/projects/flag-memory/join-lobby.mp4",
+        "poster": "assets/projects/flag-memory/cover.png",
+        "title": "Joining a lobby"
+      },
+      {
+        "type": "video",
+        "src": "assets/projects/flag-memory/podium.mp4",
+        "poster": "assets/projects/flag-memory/player-record.png",
+        "title": "Final podium"
+      }
+    ]
+  },
+  {
+    "id": "sky-garden",
+    "title": "Sky Garden",
+    "group": "Games",
+    "summary": "A farming game set on floating islands with crops, fishing, seedpacks, shops and island progression.",
+    "intro": "Sky Garden is still early in development. The main idea is a relaxed farming game where the island slowly grows and more activities open up as the player progresses.",
+    "cover": {
+      "type": "image",
+      "src": "assets/projects/sky-garden/cover.png",
+      "alt": "Sky Garden floating island with crops, trees and the player's avatar"
+    },
+    "featured": true,
+    "status": "In development",
+    "year": 2026,
+    "made": "Built solo in Roblox Studio.",
+    "details": [
+      "Players plow the ground, plant seeds, water crops and wait for each crop to grow one part at a time.",
+      "The island expands through progression and later opens up more activities.",
+      "Fishing has its own timing and reward system.",
+      "Seedpacks and shops are used to find and buy different seeds."
+    ],
+    "media": [
+      {
+        "type": "video",
+        "src": "assets/projects/sky-garden/seedpack-opening.mp4",
+        "poster": "assets/projects/sky-garden/cover.png",
+        "title": "Opening a seedpack"
+      },
+      {
+        "type": "video",
+        "src": "assets/projects/sky-garden/fishing.mp4",
+        "poster": "assets/projects/sky-garden/cover.png",
+        "title": "Fishing system"
+      },
+      {
+        "type": "video",
+        "src": "assets/projects/sky-garden/shop-system.mp4",
+        "poster": "assets/projects/sky-garden/cover.png",
+        "title": "Shop system"
+      }
+    ]
+  },
+  {
+    "id": "cube-wars",
+    "title": "Cube Wars",
+    "group": "Games",
+    "summary": "A scrapped PvP game where cubes eat orbs, pick cards and use the abilities from those cards to fight other players.",
+    "intro": "Cube Wars was a project I stopped working on. You played as a cube, collected orbs to get stronger and picked cards that changed what you could do in fights.",
+    "cover": {
+      "type": "image",
+      "src": "assets/projects/cube-wars/cover.jpg",
+      "alt": "Cube Wars gameplay showing a cube levelling up"
+    },
+    "featured": false,
+    "status": "Scrapped project",
+    "year": 2026,
+    "made": "Built solo in Roblox Studio.",
+    "details": [
+      "Players grew by collecting orbs around the map.",
+      "Cards gave the player new abilities and upgrades.",
+      "The cards could then be used to fight other players.",
+      "The project was scrapped, but I kept it here because I still like parts of the combat and progression."
+    ],
+    "media": [
+      {
+        "type": "video",
+        "src": "assets/projects/cube-wars/showcase.mp4",
+        "poster": "assets/projects/cube-wars/cover.jpg",
+        "title": "Project showcase"
+      }
+    ]
+  },
+  {
+    "id": "dialogue-system",
+    "title": "Dialogue System",
+    "group": "Systems",
+    "summary": "A reusable dialogue system with controlled text pacing, response choices and branching conversations.",
+    "intro": "I built this so dialogue could be reused for different NPCs without rebuilding the whole interface each time.",
+    "cover": {
+      "type": "image",
+      "src": "assets/projects/dialogue-system/cover.png",
+      "alt": "Dialogue interface shown in a Roblox game"
+    },
+    "featured": false,
+    "status": "Finished system",
+    "year": 2026,
+    "made": "Built in Roblox Studio.",
+    "details": [
+      "Text can appear at a controlled pace instead of showing all at once.",
+      "Replies can branch into different parts of the conversation.",
+      "The layout can be restyled for different games and NPCs.",
+      "It works with shop and interaction flows as well as normal conversations."
+    ],
+    "media": [
+      {
+        "type": "video",
+        "src": "assets/projects/dialogue-system/showcase.mp4",
+        "poster": "assets/projects/dialogue-system/cover.png",
+        "title": "Dialogue showcase"
+      }
+    ]
+  },
+  {
+    "id": "inventory-system",
+    "title": "Inventory System",
+    "group": "Systems",
+    "summary": "A custom inventory and hotbar with categories, search, item data and selected states.",
+    "intro": "This replaces Roblox's default backpack with an inventory that fits the game and can handle more item information.",
+    "cover": {
+      "type": "image",
+      "src": "assets/projects/inventory-system/cover.png",
+      "alt": "Custom Roblox inventory with categories, search and a hotbar"
+    },
+    "featured": false,
+    "status": "Finished system",
+    "year": 2026,
+    "made": "Built in Roblox Studio.",
+    "details": [
+      "Items are split into categories and can be searched.",
+      "The inventory keeps track of item data, quantities and selected states.",
+      "The hotbar stays connected to the full inventory.",
+      "The interface was built around the game's own item types instead of Roblox's default backpack."
+    ],
+    "media": [
+      {
+        "type": "video",
+        "src": "assets/projects/inventory-system/showcase.mp4",
+        "poster": "assets/projects/inventory-system/cover.png",
+        "title": "Inventory showcase"
+      }
+    ]
+  },
+  {
+    "id": "wandering-trader",
+    "title": "Wandering Trader",
+    "group": "Systems",
+    "summary": "A trader who flies onto the island in a hot-air balloon, wanders around and sells rare seeds for less.",
+    "intro": "The wandering trader is a temporary visitor in Sky Garden. He arrives in a hot-air balloon, walks around the player's island and offers rare seeds for 30% cheaper than normal.",
+    "cover": {
+      "type": "image",
+      "src": "assets/projects/wandering-trader/cover.png",
+      "alt": "Wandering Trader arriving in a hot-air balloon"
+    },
+    "featured": false,
+    "status": "In development",
+    "year": 2026,
+    "made": "Built for Sky Garden.",
+    "details": [
+      "The trader arrives on the island using a hot-air balloon.",
+      "He wanders around the player's island while he is visiting.",
+      "Players can talk to him and open his shop.",
+      "He sells rare seeds for 30% cheaper than their normal price."
+    ],
+    "media": [
+      {
+        "type": "video",
+        "src": "assets/projects/wandering-trader/showcase.mp4",
+        "poster": "assets/projects/wandering-trader/cover.png",
+        "title": "Wandering Trader showcase"
+      }
+    ]
+  },
+  {
+    "id": "pixel-burst",
+    "title": "Pixel Burst",
+    "group": "Tools",
+    "summary": "My Roblox Studio plugin for building pixel bursts, UI explosions and reveal effects without remaking every particle by hand.",
+    "intro": "Pixel Burst is a Studio plugin I made to speed up a type of effect I use often. The editor lets me build the effect visually and preview it before using it in a game.",
+    "cover": {
+      "type": "image",
+      "src": "assets/projects/pixel-burst/cover.png",
+      "alt": "Pixel Burst Studio plugin editor with effect layers and a live preview"
+    },
+    "featured": true,
+    "status": "In development",
+    "year": 2026,
+    "made": "Built as a Roblox Studio plugin.",
+    "details": [
+      "Effects are built from separate layers with their own shape, timing and motion settings.",
+      "The live preview makes it easier to adjust the result without running the game every time.",
+      "Layers can be reordered, duplicated, hidden and edited separately.",
+      "The plugin generates code so the finished effect can be installed into a project."
+    ],
+    "media": [
+      {
+        "type": "video",
+        "src": "assets/projects/pixel-burst/showcase.mp4",
+        "poster": "assets/projects/pixel-burst/cover.png",
+        "title": "Plugin usage"
+      }
+    ]
+  },
+  {
+    "id": "interface-work",
+    "title": "Interface Work",
+    "group": "UI and effects",
+    "summary": "Two shop interfaces made in different styles: one cleaner and darker, and one based around studs and old-school Roblox UI.",
+    "intro": "These are two shop interfaces I made in different styles. I do not use one fixed look for every game; I try to match the UI to the project.",
+    "cover": {
+      "type": "image",
+      "src": "assets/projects/interface-work/cheese-shop.png",
+      "alt": "Dark cheese shop interface"
+    },
+    "featured": false,
+    "status": "UI showcase",
+    "year": 2026,
+    "made": "Designed and built in Roblox Studio.",
+    "details": [
+      "The cheese shop uses a cleaner dark style with a large item preview and clear purchase choices.",
+      "The seed shop uses studs, chunky borders, pixel text and bright rarity colours.",
+      "Both layouts keep the item, price and purchase state easy to read.",
+      "The interfaces were made for different games rather than being reskins of the same template."
+    ],
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/projects/interface-work/cheese-shop.png",
+        "alt": "Cheese shop UI with item description and purchase buttons",
+        "title": "Cheese shop"
+      },
+      {
+        "type": "image",
+        "src": "assets/projects/interface-work/seed-shop.png",
+        "alt": "Studded seed shop UI with seed rarity and purchase buttons",
+        "title": "Studded seed shop"
+      }
+    ]
+  },
+  {
+    "id": "combat-effects",
+    "title": "Combat Effects",
+    "group": "UI and effects",
+    "summary": "A group of combat effects I made while practising VFX, including fireballs, sword slashes and an explosion.",
+    "intro": "These are a few combat effects I made in Roblox Studio. They are separate experiments rather than one full game system.",
+    "cover": {
+      "type": "image",
+      "src": "assets/projects/combat-effects/cover.jpg",
+      "alt": "Fire and slash effect in Roblox Studio"
+    },
+    "featured": false,
+    "status": "VFX showcase",
+    "year": 2026,
+    "made": "Made in Roblox Studio.",
+    "details": [
+      "The effects combine particles, trails, beams and timed movement.",
+      "Each clip was made as a separate practice piece.",
+      "I focused on impact, timing and keeping the effect readable during gameplay."
+    ],
+    "media": [
+      {
+        "type": "video",
+        "src": "assets/projects/combat-effects/explosion-slash.mp4",
+        "poster": "assets/projects/combat-effects/cover.jpg",
+        "title": "Explosion and slash"
+      },
+      {
+        "type": "video",
+        "src": "assets/projects/combat-effects/fireball.mp4",
+        "poster": "assets/projects/combat-effects/cover.jpg",
+        "title": "Fireball"
+      },
+      {
+        "type": "video",
+        "src": "assets/projects/combat-effects/ability.mp4",
+        "poster": "assets/projects/combat-effects/cover.jpg",
+        "title": "Ability effect"
+      },
+      {
+        "type": "video",
+        "src": "assets/projects/combat-effects/sword-slash.mp4",
+        "poster": "assets/projects/combat-effects/cover.jpg",
+        "title": "Sword slash"
+      }
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111315">
+  <meta name="description" content="Project by afloppaguy.">
+  <title>Project — afloppaguy</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/site.js" defer></script>
+  <script src="scripts/project.js" defer></script>
+</head>
+<body data-page="project">
+  <header class="site-header">
+    <a class="site-name" href="index.html">afloppaguy</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <button class="sound-button" type="button" data-sound-toggle aria-pressed="false">Sound off</button>
+    </nav>
+  </header>
+
+  <main id="project-root" class="page-width project-page" aria-live="polite">
+    <p class="loading-copy">Loading project…</p>
+  </main>
+
+  <footer class="site-footer page-width">
+    <a href="work.html">← Back to work</a>
+    <a href="about.html#contact">Contact →</a>
+  </footer>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+</body>
+</html>
