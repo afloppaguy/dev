@@ -3,70 +3,237 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111315">
-  <meta name="description" content="Roblox developer focused on scripting, interfaces and VFX.">
-  <meta property="og:title" content="afloppaguy">
-  <meta property="og:description" content="Roblox developer focused on scripting, interfaces and VFX.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://afloppaguy.github.io/dev/">
-  <meta property="og:image" content="https://afloppaguy.github.io/dev/assets/social-card.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <title>afloppaguy</title>
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/main.css">
-  <script src="scripts/site.js" defer></script>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="afloppaguy | Roblox Scripter">
+  <title>afloppaguy | Roblox Scripter</title>
+  <link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
+  <link rel="apple-touch-icon" href="assets/favicon.jpg">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body data-page="home">
-  <header class="site-header">
-    <a class="site-name" href="index.html">afloppaguy</a>
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="work.html">Work</a>
-      <a href="about.html">About</a>
-      <button class="sound-button" type="button" data-sound-toggle aria-pressed="false">Sound off</button>
-    </nav>
+<body>
+  <div class="feather-field" aria-hidden="true">
+    <img class="feather feather-1" src="assets/feathers/feather-1.png" alt="">
+    <img class="feather feather-2" src="assets/feathers/feather-2.png" alt="">
+    <img class="feather feather-3" src="assets/feathers/feather-3.png" alt="">
+    <img class="feather feather-4" src="assets/feathers/feather-4.png" alt="">
+    <img class="feather feather-5" src="assets/feathers/feather-5.png" alt="">
+    <img class="feather feather-6" src="assets/feathers/feather-6.png" alt="">
+    <img class="feather feather-7" src="assets/feathers/feather-7.png" alt="">
+    <img class="feather feather-8" src="assets/feathers/feather-8.png" alt="">
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="shell header-inner">
+      <a class="wordmark" href="#top" aria-label="Back to top">afloppaguy</a>
+      <div class="header-tools">
+        <p class="owner-time" aria-live="off">For me, it’s <time id="ownerTime">--:--</time></p>
+        <button class="music-toggle" id="musicToggle" type="button" aria-label="Play music" aria-pressed="false" title="Play music">
+          <span class="music-note" aria-hidden="true">
+            <svg viewBox="0 0 28 28" role="presentation">
+              <path class="note-stem" d="M16 5.2v11.4c0 2.3-1.7 4.3-4.8 4.3-2.5 0-4-1.4-4-3.3 0-2.2 2-3.7 4.6-3.7 1.1 0 2 .2 2.8.5V8.8l8-2.2v9.1c0 2.3-1.7 4.2-4.7 4.2-2.4 0-3.9-1.4-3.9-3.2 0-2.2 1.9-3.8 4.5-3.8.9 0 1.7.2 2.5.5V9.2L16 10.5z"/>
+              <path class="note-feather" d="M7.2 10.7c2.4-.6 4.3-.3 5.2.6-2.2.9-3.8 2.7-4.8 4.9-1.1-1.3-1.2-3.8-.4-5.5z"/>
+            </svg>
+          </span>
+          <span class="music-bars" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i>
+          </span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section class="home-hero page-width">
-      <div class="home-intro">
-        <h1>Hey, I’m<br>afloppaguy.</h1>
-        <p>I script Roblox games and also make UI, VFX and Studio tools. Most of my work is built from scratch, and every project on this site was made by me.</p>
-        <div class="home-actions">
-          <a class="plain-button plain-button--filled" href="work.html">See my work</a>
-          <button class="plain-button" type="button" data-copy-discord>Copy Discord</button>
+  <main id="top">
+    <section class="hero">
+      <div class="shell hero-shell">
+        <div class="hero-copy reveal">
+          <h1>Roblox<br>Scripter</h1>
+          <p>I make systems, full games and gameplay mechanics on Roblox.</p>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <img class="hero-image" src="assets/hero-main.png" alt="">
+          <img class="hero-overlay" src="assets/hero-overlay.png" alt="">
         </div>
       </div>
-      <figure class="profile-figure">
-        <img src="assets/profile.png" alt="afloppaguy profile image">
-      </figure>
     </section>
 
-    <section class="page-width home-selected" aria-labelledby="selected-title">
-      <div class="simple-heading">
-        <h2 id="selected-title">Selected work</h2>
-        <a href="work.html">View everything →</a>
+    <section class="section about-section" aria-labelledby="about-heading">
+      <div class="about-fragment" aria-hidden="true">
+        <img src="assets/fragment-soft-girl.png" alt="">
       </div>
-      <div id="featured-work" class="featured-work" aria-live="polite"></div>
+      <div class="shell about-shell reveal">
+        <div class="about-title">
+          <h2 id="about-heading">About me</h2>
+          <span class="section-rule" aria-hidden="true"></span>
+        </div>
+        <div class="about-copy">
+          <p>I’ve been scripting on Roblox for around 3 years. I mainly make gameplay mechanics, systems and UI-based games.</p>
+          <p class="about-secondary">Scripting is what I focus on most, from full games to smaller mechanics and systems.</p>
+        </div>
+      </div>
     </section>
 
-    <section class="home-contact page-width">
-      <h2>Commissions are open.</h2>
-      <p>I mainly take paid per-task work. Send me what you need, references and what already exists.</p>
-      <div class="home-actions">
-        <button class="plain-button plain-button--filled" type="button" data-copy-discord>Copy @afloppaguy</button>
-        <a class="text-link" href="https://www.youtube.com/@afloppaguy" target="_blank" rel="noreferrer">YouTube ↗</a>
+    <section class="section games-section">
+      <div class="games-fragment" aria-hidden="true">
+        <img src="assets/fragment-eye.png" alt="">
+      </div>
+      <div class="shell section-shell">
+        <div class="section-head reveal">
+          <h2>Active Games</h2>
+          <span class="section-rule" aria-hidden="true"></span>
+        </div>
+
+        <div class="games-list reveal">
+          <a class="game-row" href="https://www.roblox.com/games/135731402994040/Roll-A-Dice" target="_blank" rel="noreferrer" data-roblox-game data-place-id="135731402994040">
+            <div class="game-thumb media-frame"><img src="assets/roll-a-dice.png" alt="Roll A Dice portfolio thumbnail"></div>
+            <div class="game-copy">
+              <h3>Roll A Dice</h3>
+              <p>Made everything in the game and all of its updates.</p>
+            </div>
+            <dl class="game-stats" hidden>
+              <div><dt>CCU</dt><dd data-stat="playing"></dd></div>
+              <div><dt>Visits</dt><dd data-stat="visits"></dd></div>
+            </dl>
+          </a>
+          <a class="game-row" href="https://www.roblox.com/games/134082194687128/Feed-The-Demon" target="_blank" rel="noreferrer" data-roblox-game data-place-id="134082194687128">
+            <div class="game-thumb media-frame"><img src="assets/feed-the-demon.png" alt="Feed The Demon portfolio thumbnail"></div>
+            <div class="game-copy">
+              <h3>Feed The Demon</h3>
+              <p>I scripted, drew and made the UI for this entire game.</p>
+            </div>
+            <dl class="game-stats" hidden>
+              <div><dt>CCU</dt><dd data-stat="playing"></dd></div>
+              <div><dt>Visits</dt><dd data-stat="visits"></dd></div>
+            </dl>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section work-section">
+      <div class="work-fragment" aria-hidden="true">
+        <img src="assets/fragment-soft-girl.png" alt="">
+      </div>
+      <div class="shell section-shell">
+        <div class="section-head reveal section-head-stack">
+          <div>
+            <h2>Other Work</h2>
+            <p class="section-note">This isn’t all of my work. Ask me if you want to see more.</p>
+          </div>
+          <span class="section-rule" aria-hidden="true"></span>
+        </div>
+
+        <div class="work-grid reveal" id="workGrid">
+          <article class="work-card">
+            <button class="work-thumb media-frame work-media-button" type="button" data-project-media="flag-memory" aria-label="Open Flag Memory videos">
+              <video muted loop playsinline preload="none" poster="assets/projects/flag-memory-round.jpg" aria-hidden="true">
+                <source src="assets/projects/flag-memory-round.mp4" type="video/mp4">
+              </video>
+              <span class="media-open-label" aria-hidden="true">View</span>
+            </button>
+            <h3>Flag Memory [Full Game]</h3>
+            <p>Kahoot-based multiplayer game with working bots and 130+ flags with full 128x128 pixel accuracy. Retro style with lots of cosmetics and effects.</p>
+          </article>
+
+          <article class="work-card">
+            <button class="work-thumb media-frame work-media-button" type="button" data-project-media="katana-beats" aria-label="Open Katana Beats video">
+              <video muted loop playsinline preload="none" poster="assets/projects/katana-beats.jpg" aria-hidden="true">
+                <source src="assets/projects/katana-beats.mp4" type="video/mp4">
+              </video>
+              <span class="media-open-label" aria-hidden="true">View</span>
+            </button>
+            <h3>Katana Beats</h3>
+            <p>Unfinished Saber Beats-inspired rhythm game I made mostly as a hobby. Has a community, auto beats for maps, Toolbox music searching, publishing, admin map verification and featured maps.</p>
+          </article>
+
+          <article class="work-card">
+            <button class="work-thumb media-frame work-media-button" type="button" data-project-media="gem-cutting" aria-label="Open Gem Cutting Mechanic video">
+              <video muted loop playsinline preload="none" poster="assets/projects/gem-cutting.jpg" aria-hidden="true">
+                <source src="assets/projects/gem-cutting.mp4" type="video/mp4">
+              </video>
+              <span class="media-open-label" aria-hidden="true">View</span>
+            </button>
+            <h3>Gem Cutting Mechanic</h3>
+            <p>Quick gem cutting mechanic that I made because I wanted to test something out.</p>
+          </article>
+
+          <article class="work-card work-extra" hidden>
+            <button class="work-thumb media-frame work-media-button" type="button" data-project-media="seedpack-reveal" aria-label="Open Seedpack Reveal video">
+              <video muted loop playsinline preload="none" poster="assets/projects/seedpack-reveal.jpg" aria-hidden="true">
+                <source src="assets/projects/seedpack-reveal.mp4" type="video/mp4">
+              </video>
+              <span class="media-open-label" aria-hidden="true">View</span>
+            </button>
+            <h3>Seedpack Reveal</h3>
+            <p>Seed reveal for a “seedpack” on a game that I made.</p>
+          </article>
+
+          <article class="work-card work-extra" hidden>
+            <button class="work-thumb media-frame work-media-button" type="button" data-project-media="dialogue-system" aria-label="Open Dialogue System video">
+              <video muted loop playsinline preload="none" poster="assets/projects/dialogue-system.jpg" aria-hidden="true">
+                <source src="assets/projects/dialogue-system.mp4" type="video/mp4">
+              </video>
+              <span class="media-open-label" aria-hidden="true">View</span>
+            </button>
+            <h3>Dialogue System</h3>
+            <p>Quick dialogue system I made on a commission.</p>
+          </article>
+
+          <article class="work-card work-extra" hidden>
+            <button class="work-thumb media-frame work-media-button" type="button" data-project-media="quest-board" aria-label="Open Quest Board and Quest System video">
+              <video muted loop playsinline preload="none" poster="assets/projects/quest-board.jpg" aria-hidden="true">
+                <source src="assets/projects/quest-board.mp4" type="video/mp4">
+              </video>
+              <span class="media-open-label" aria-hidden="true">View</span>
+            </button>
+            <h3>Quest Board + Quest System</h3>
+            <p>Cool little quest system I made for a personal hobby game.</p>
+          </article>
+
+        </div>
+
+        <button class="view-more reveal" id="viewMore" type="button" aria-expanded="false" aria-controls="workGrid">
+          <span>View more projects</span>
+          <svg viewBox="0 0 28 12" aria-hidden="true"><path d="M1 6h23M19.5 1.8 24 6l-4.5 4.2"/></svg>
+        </button>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer page-width">
-    <span>© <span data-year></span> afloppaguy</span>
-    <span>Roblox Studio · CEST</span>
+  <footer class="site-footer">
+    <div class="shell footer-inner reveal">
+      <div class="footer-name">afloppaguy</div>
+      <div class="contacts">
+        <button class="contact contact-copy" type="button" data-copy="@afloppaguy" aria-label="Copy Discord username @afloppaguy">
+          <img src="assets/discord.svg" alt="" aria-hidden="true">
+          <span>@afloppaguy</span>
+          <em class="contact-state" aria-hidden="true">Copy</em>
+        </button>
+        <a class="contact" href="https://www.roblox.com/users/profile?username=afloppaguy" target="_blank" rel="noreferrer" aria-label="Open Roblox profile for afloppaguy">
+          <img src="assets/roblox.svg" alt="" aria-hidden="true">
+          <span>@afloppaguy</span>
+          <em class="contact-state" aria-hidden="true">Open</em>
+        </a>
+      </div>
+    </div>
   </footer>
 
-  <div class="toast" data-toast role="status" aria-live="polite"></div>
+  <dialog class="project-viewer" id="projectViewer" aria-labelledby="projectViewerTitle">
+    <div class="project-viewer-inner">
+      <div class="project-viewer-head">
+        <h2 id="projectViewerTitle"></h2>
+        <button class="project-viewer-close" id="projectViewerClose" type="button" aria-label="Close media viewer">Close</button>
+      </div>
+      <div class="project-viewer-switcher" id="projectViewerSwitcher" aria-label="Choose project video"></div>
+      <div class="project-viewer-media">
+        <video id="projectViewerVideo" controls playsinline preload="metadata"></video>
+        <img id="projectViewerImage" alt="" hidden>
+      </div>
+    </div>
+  </dialog>
+
+  <audio id="portfolioAudio" src="assets/music.mp3" loop preload="auto" autoplay playsinline></audio>
+  <script src="script.js"></script>
 </body>
 </html>
